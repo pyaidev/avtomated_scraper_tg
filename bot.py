@@ -15,7 +15,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
-    await message.reply("Привет!\nЯ бот, который проверяет существует ли канал или Бан в телеграмме.\nПросто отправь ссылку на канал и я проверю его на существование.\nПример: @channelname")
+    await message.reply("Привет!\nЯ бот, который проверяет существует ли канал или Бан в телеграмме.\nПросто отправь ссылку на канал и я проверю его на существование.\nПример: https://t.me/channelname")
 
 @dp.message_handler(Text(contains='https://t.me/'))
 async def send_media(message: types.Message):
